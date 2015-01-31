@@ -2,6 +2,7 @@
 <html lang="en" ng-app="adminApp">
 
 <head>
+  <base href="/admin/">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -49,12 +50,15 @@
 <script src="app/js/global/plugins/excanvas.min.js"></script>
 <![endif]-->
 <script src="app/js/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="app/js/global/plugins/underscore-min.js" type="text/javascript"></script>
 <script src="app/js/global/plugins/bootstrap.min.js" type="text/javascript"></script>
 <!-- END CORE JQUERY PLUGINS -->
 
 <script src="app/js/angular.min.js"></script>
 <script src="app/js/angular-route.min.js"></script>
 <script src="app/js/angular-animate.min.js" ></script>
+<script src="app/js/angular-translate.min.js"></script>
+<script src="app/js/angular-translate-loader-static-files.min.js"></script>
 <script src="app/js/toaster.js"></script>
 <script src="app/js/ui-bootstrap-tpls.min.js"></script>
 <script src="app/scripts/app.js"></script>
@@ -62,5 +66,7 @@
 <script src="app/scripts/directives/directives.js"></script>
 <script src="app/scripts/controllers/authCtrl.js"></script>
 <script src="app/scripts/controllers/mainCtrl.js"></script>
+<script src="app/scripts/controllers/customersCtrl.js"></script>
+<script src="app/scripts/controllers/pricefactorCtrl.js"></script>
 </html>
 
