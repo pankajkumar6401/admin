@@ -1,0 +1,45 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o"></i>
+    </button>
+    <h3 class="modal-title">{{title}}</h3>
+</div>
+<div class="modal-body">
+    <form name="healthquestion_form" class="form-horizontal" role="form" novalidate>
+
+        <form-element label="label" mod="healthquestion">
+            <div class="form-group">
+                <label class="col-sm-3 no-padding-right">LABEL</label>
+                <div class="col-sm-7">
+                    <input class="form-control" name="label" placeholder="label" ng-model="healthquestion.label" ng-required="true"/>
+                </div>
+            </div>
+        </form-element>
+        <form-element label="VALUE" mod="healthquestion">
+            <div class="form-group">
+                <label class="col-sm-3 no-padding-right">VALUE</label>
+                <div class="col-sm-7">
+                    <input type="text" name="value" class="form-control" placeholder="value" ng-model="healthquestion.value"  />
+                    <small class="errorMessage" ng-show="healthquestion_form.value.$dirty && healthquestion_form.value.$invalid"> Enter the value.</small>
+                </div>
+            </div>
+        </form-element>
+
+        <div class="space"></div>
+        <div class="space-4"></div>
+        <div class="modal-footer">
+            <form-element label="">
+                <div class="text-right">
+                    <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Cancel</a>
+                    <button ng-click="savehealthquestion(healthquestion);"
+                            ng-disabled="healthquestion_form.$invalid || enableUpdate"
+                            class="btn btn-sm btn-primary"
+                            type="submit">
+                        <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                    </button>
+                </div>
+            </form-element>
+        </div>
+    </form>
+</div>
+

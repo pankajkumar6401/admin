@@ -1,0 +1,45 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="cancel();">
+        <i class="fa fa-times-circle-o"></i>
+    </button>
+    <h3 class="modal-title">{{title}}</h3>
+</div>
+<div class="modal-body">
+    <form name="catprice_form" class="form-horizontal" role="form" novalidate>
+
+        <form-element label="label" mod="catprice">
+            <div class="form-group">
+                <label class="col-sm-3 no-padding-right">LABEL</label>
+                <div class="col-sm-7">
+                    <input class="form-control" name="label" placeholder="label" ng-model="catprice.label" ng-required="true"/>
+                </div>
+            </div>
+        </form-element>
+        <form-element label="PRICE" mod="catprice">
+            <div class="form-group">
+                <label class="col-sm-3 no-padding-right">PRICE</label>
+                <div class="col-sm-7">
+                    <input type="text" name="price" class="form-control" placeholder="price" ng-model="catprice.price"  ng-required="true"/>
+                    <small class="errorMessage" ng-show="catprice_form.price.$dirty && catprice_form.price.$invalid"> Enter the price in numeric.</small>
+                </div>
+            </div>
+        </form-element>
+
+        <div class="space"></div>
+        <div class="space-4"></div>
+        <div class="modal-footer">
+            <form-element label="">
+                <div class="text-right">
+                    <a class="btn btn-sm" ng-click="cancel()"><i class="ace-icon fa fa-reply"></i>Cancel</a>
+                    <button ng-click="savecatPrice(catprice);"
+                            ng-disabled="catprice_form.$invalid || enableUpdate"
+                            class="btn btn-sm btn-primary"
+                            type="submit">
+                        <i class="ace-icon fa fa-check"></i>{{buttonText}}
+                    </button>
+                </div>
+            </form-element>
+        </div>
+    </form>
+</div>
+
